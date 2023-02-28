@@ -1,13 +1,13 @@
 
 {% extends 'menu.html' %}
 {% load static %}
-{% block title %}Cadastro de Médicos{% endblock %}
+{% block title %}Cadastro de Cliente{% endblock %}
 
 {% block body %}
-<h1>Cadastro de Médicos</h1>
+<h1>Cadastro de Cliente</h1>
 <form>
     <div>
-        <label>Nome do Médico:</label>
+        <label>Nome do Cliente:</label>
         <input type="text" name="name" id="name">
     </div>
     <div>
@@ -19,7 +19,7 @@
     </div>
 </form>
 <div class="container">
-    <h1>Cadastro de Médicos</h1>
+    <h1>Cadastro de Cliente</h1>
     <form class="row g-3">
         <div class="col-md-10">
             <label for="name" class="form-label">Nome</label>
@@ -39,7 +39,7 @@
         </div>
         <div class="col-12">
             <label for="address" class="form-label">Endereço</label>
-            <input type="text" class="form-control" id="address" placeholder="Tv. Pau Amarelo S/N Vila Nova">
+            <input type="text" class="form-control" id="address" placeholder="">
         </div>
         <div class="col-md-6">
             <label for="city" class="form-label">Cidade</label>
@@ -49,14 +49,6 @@
             <label for="state" class="form-label">Estado</label>
             <select id="state" class="form-select">
                 <option selected>PA</option>
-                <option>MG</option>
-                <option>SP</option>
-                <option>DF</option>
-                <option>PE</option>
-                <option>MA</option>
-                <option>CE</option>
-                <option>AC</option>
-                <option>PR</option>
             </select>
         </div>
         <div class="col-md-2">
