@@ -2,9 +2,65 @@
 {% extends 'menu.html' %}
 {% load static %}
 
-{% block title %}Cadastro de Médicos{% endblock %}
+{% block title %}Cadastro de Empresas{% endblock %}
 
 {% block body %}
-<h1>Lista de Médicos</h1>
+<h1>Cadastro de Empresas</h1>
+<form>
+    <div>
+        <label>Nome da Empresa:</label>
+        <input type="text" name="name" id="name">
+    </div>
+     <div>
+            <label>Senha:</label>
+            <input type="password" name="name" id="password">
+        </div>
+
+    <div>
+        <input type="submit" value="Enviar">
+    </div>
+</form>
+<div class="container">
+    <h1>Cadastro de Empresa</h1>
+    <form class="row g-3">
+        <div class="col-md-10">
+            <label for="name" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="name">
+        </div>
+        <div class="col-md-3">
+            <label for="CNPJ" class="form-label">CNPJ</label>
+            <input type="int" class="form-control" id="CNPJ">
+        </div>
+        <div class="col-md-6">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="email">
+        </div>
+        <div class="col-md-2">
+            <label for="password" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="password">
+        </div>
+        <div class="col-12">
+            <label for="address" class="form-label">Endereço</label>
+            <input type="text" class="form-control" id="address" placeholder="">
+        </div>
+        <div class="col-md-6">
+            <label for="city" class="form-label">Cidade</label>
+            <input type="text" class="form-control" id="city">
+        </div>
+        <div class="col-md-4">
+            <label for="state" class="form-label">Estado</label>
+            <select id="state" class="form-select">
+                <option selected>PA</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label for="zip" class="form-label">CEP</label>
+            <input type="text" class="form-control" id="zip">
+        </div>
+        <div class="col-4">
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </div>
+    </form>
+</div>
 
 {% endblock %}
