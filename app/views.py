@@ -4,7 +4,7 @@ from django.shortcuts import render
 # Create your views here.
 def home(request):
     #return HttpResponse("<h1> Olá mundo Ufra!</h1>")
-    return render(request,'base.html')
+    return render(request, 'base.html')
 
 
 def login(request):
@@ -15,3 +15,6 @@ def create_doc(request):
 
 def read_doc(request):
     return render(request, 'read_doc.html')
+
+def pedidos(request):
+    return render(request, 'pedidos.html')
