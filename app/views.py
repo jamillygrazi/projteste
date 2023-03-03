@@ -18,3 +18,7 @@ def read_doc(request):
 
 def pedidos(request):
     return render(request, 'pedidos.html')
+def menu(request):
+    return render(request, 'menu.html')
+def pagamentos(request):
+    return render(request, 'pagamentos.html')
