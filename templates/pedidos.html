@@ -7,45 +7,85 @@
 
 </form>
 <div class="container">
-    <h1>Pedidos</h1>
+    <h1>CARDÁPIO</h1>
+
+    <div class="container">
+        <h1>Restaurante</h1>
     <form class="row g-3">
-        <div class="col-md-10">
-            <label for="name" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="name">
-        </div>
-        <div class="col-md-3">
-            <label for="CPF" class="form-label">CPF</label>
-            <input type="int" class="form-control" id="CPF">
-        </div>
-        <div class="col-md-6">
-            <label for="email" class="form-label">E-mail</label>
-            <input type="email" class="form-control" id="email">
-        </div>
-        <div class="col-md-2">
-            <label for="password" class="form-label">Senha</label>
-            <input type="password" class="form-control" id="password">
-        </div>
-        <div class="col-12">
-            <label for="address" class="form-label">Endereço</label>
-            <input type="text" class="form-control" id="address" placeholder="">
-        </div>
-        <div class="col-md-6">
-            <label for="city" class="form-label">Cidade</label>
-            <input type="text" class="form-control" id="city">
-        </div>
         <div class="col-md-4">
-            <label for="state" class="form-label">Estado</label>
+            <label for="state" class="form-label">Marmita</label>
             <select id="state" class="form-select">
-                <option selected>PA</option>
+                <option selected>Frango</option>
+                <option selected>Carne</option>
+                <option selected>Calabresa</option>
+                <option selected>Mista</option>
             </select>
+            <label for="state" class="form-label">Quantidade</label>
+             <select id="state" class="form-select">
+                 <option selected>1</option>
+                <option selected>2</option>
+                <option selected>3</option>
+                <option selected>4</option>
+                <option selected>5</option>
+                 </select>
         </div>
-        <div class="col-md-2">
-            <label for="zip" class="form-label">CEP</label>
-            <input type="text" class="form-control" id="zip">
+
+        <div class="container">
+    <h1>Lanchonete</h1>
+            <div class="col-md-4">
+            <label for="state" class="form-label">Hambúrguer</label>
+            <select id="state" class="form-select">
+                <option selected>Burguer simples</option>
+                <option selected>Burguer Especial</option>
+                <option selected>Burguer Misto</option>
+            </select>
+            </div>
+
+            <div class="col-md-4">
+            <label for="state" class="form-label">Quantidade</label>
+             <select id="state" class="form-select">
+                 <option selected>1</option>
+                <option selected>2</option>
+                <option selected>3</option>
+                <option selected>4</option>
+                <option selected>5</option>
+                 </select>
         </div>
+            <div class="container">
+    <h1>Bebidas</h1>
+
+                <form class="row g-3">
+        <div class="col-md-4">
+            <label for="state" class="form-label">Bebidas</label>
+            <select id="state" class="form-select">
+                <option selected>suco</option>
+                <option selected>refrigerante</option>
+                <option selected>água</option>
+            </select>
+            <label for="state" class="form-label">Quantidade</label>
+             <select id="state" class="form-select">
+                 <option selected>1</option>
+                <option selected>2</option>
+                <option selected>3</option>
+                <option selected>4</option>
+                <option selected>5</option>
+                 </select>
+        </div>
+
+
+
+
+
+
+
+
+
         <div class="col-4">
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+
+            <button type="submit" class="btn btn-primary"<li><a class,="dropdown-item" href="{% url 'pagamentos' %}">Finalizar Pedido</a></li></button>
+
         </div>
+
     </form>
 </div>
 {% endblock %}

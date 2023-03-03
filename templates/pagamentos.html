@@ -1,0 +1,34 @@
+{% extends 'menu.html' %}
+{% load static %}
+
+{% block title %}Cadastro de Cliente{% endblock %}
+
+{% block body %}
+
+
+</form>
+<div class="container">
+    <h1>Pagamentos</h1>
+
+
+    <form class="row g-3">
+        <div class="col-md-4">
+            <label for="state" class="form-label">Formas de Pagamento</label>
+            <select id="state" class="form-select">
+                <option selected>PIX</option>
+                <option selected>Cartão de crédito</option>
+                <option selected>Cartão de Débito</option>
+                <option selected>No ato da entrega</option>
+            </select>
+        </div>
+
+
+
+
+        <div class="col-4">
+            <button type="submit" class="btn btn-primary">Efetuar Pagamento</button>
+        </div>
+
+    </form>
+</div>
+{% endblock %}

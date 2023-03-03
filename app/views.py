@@ -6,7 +6,8 @@ def home(request):
     #return HttpResponse("<h1> Olá mundo Ufra!</h1>")
     return render(request, 'base.html')
 
-
+def principal(request):
+    return render(request, 'principal.html')
 def login(request):
     return render(request, 'login.html')
 
@@ -18,3 +19,7 @@ def read_doc(request):
 
 def pedidos(request):
     return render(request, 'pedidos.html')
+def menu(request):
+    return render(request, 'menu.html')
+def pagamentos(request):
+    return render(request, 'pagamentos.html')
