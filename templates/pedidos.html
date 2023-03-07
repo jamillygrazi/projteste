@@ -4,8 +4,6 @@
 
 {% block body %}
 
-
-</form>
 <div class="container">
     <h1>CARDÁPIO</h1>
 
@@ -21,7 +19,7 @@
                 <option selected>Mista</option>
             </select>
             <label for="state" class="form-label">Quantidade</label>
-             <select id="state" class="form-select">
+             <select id="quantidade" class="form-select">
                  <option selected>1</option>
                 <option selected>2</option>
                 <option selected>3</option>
@@ -34,7 +32,7 @@
     <h1>Lanchonete</h1>
             <div class="col-md-4">
             <label for="state" class="form-label">Hambúrguer</label>
-            <select id="state" class="form-select">
+            <select id="hambúrguer" class="form-select">
                 <option selected>Burguer simples</option>
                 <option selected>Burguer Especial</option>
                 <option selected>Burguer Misto</option>
@@ -43,7 +41,7 @@
 
             <div class="col-md-4">
             <label for="state" class="form-label">Quantidade</label>
-             <select id="state" class="form-select">
+             <select id="int" class="form-select">
                  <option selected>1</option>
                 <option selected>2</option>
                 <option selected>3</option>
@@ -57,13 +55,13 @@
                 <form class="row g-3">
         <div class="col-md-4">
             <label for="state" class="form-label">Bebidas</label>
-            <select id="state" class="form-select">
+            <select id="bebida" class="form-select">
                 <option selected>suco</option>
                 <option selected>refrigerante</option>
                 <option selected>água</option>
             </select>
             <label for="state" class="form-label">Quantidade</label>
-             <select id="state" class="form-select">
+             <select id="numero" class="form-select">
                  <option selected>1</option>
                 <option selected>2</option>
                 <option selected>3</option>
@@ -73,16 +71,9 @@
         </div>
 
 
+                    <div class="col-4">
 
-
-
-
-
-
-
-        <div class="col-4">
-
-            <button type="submit" class="btn btn-primary"<li><a class,="dropdown-item" href="{% url 'pagamentos' %}">Finalizar Pedido</a></li></button>
+            <button type="submit" class="btn btn-primary"li><a class,="dropdown-item" href="{% url 'pagamentos' %}">Finalizar Pedido</a></li></button>
 
         </div>
 
