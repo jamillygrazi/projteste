@@ -3,22 +3,16 @@
 {% block title %}Login{% endblock %}
 {% block body %}
 
-<h1>Login</h1>
-<form>
-    <div class="col-md-3">
-        <label>Usuário:</label>
-        <input type="text" name="name" id="name">
-        <select id="state" class="form-select">
-                <option selected>Empresa</option>
-            <option selected>Cliente</option>
-            </select>
-    </div>
-    <div>
-        <label>Senha:</label>
-        <input type="password" name="mail" id="mail">
-    </div>
-    <div>
-        <input type="submit" value="Enviar">
-    </div>
+<form class="col-md-3 position-absolute top-50 start-50 translate-middle">
+    <h2>Login</h2>
+    <select id="state" class="form-select">
+        <option selected>Empresa</option>
+        <option selected>Cliente</option>
+    </select>
+    <label>Usuário:</label>
+    <input class="form-control" type="text" name="name" id="name">
+     <label>Senha:</label>
+    <input class="form-control" type="password" name="mail" id="mail">
+    <input class="btn btn-primary" type="submit" value="Enviar">
 </form>
 {% endblock %}

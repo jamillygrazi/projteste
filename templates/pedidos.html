@@ -5,10 +5,16 @@
 {% block body %}
 
 <div class="container">
-    <h1>CARDÁPIO</h1>
+    <h2>CARDÁPIO</h2>
+
+    <div style="position: absolute; left: 50%;">
+        <img class="mb-3" style="width: 80%;" src="{% static 'image/marmitas.jpg' %}">
+        <img class="mb-3" style="width: 80%;" src="{% static 'image/hamburguer.jpg' %}">
+        <img class="mb-3" style="width: 80%;" src="{% static 'image/bebidas.jpg' %}">
+    </div>
 
     <div class="container">
-        <h1>Restaurante</h1>
+        <h2>Restaurante</h2>
     <form class="row g-3">
         <div class="col-md-4">
             <label for="state" class="form-label">Marmita</label>
@@ -29,7 +35,7 @@
         </div>
 
         <div class="container">
-    <h1>Lanchonete</h1>
+    <h2 class="mt-4">Lanchonete</h2>
             <div class="col-md-4">
             <label for="state" class="form-label">Hambúrguer</label>
             <select id="hambúrguer" class="form-select">
@@ -50,7 +56,7 @@
                  </select>
         </div>
             <div class="container">
-    <h1>Bebidas</h1>
+    <h2 class="mt-4">Bebidas</h2>
 
                 <form class="row g-3">
         <div class="col-md-4">
@@ -73,7 +79,7 @@
 
                     <div class="col-4">
 
-            <button type="submit" class="btn btn-primary"li><a class,="dropdown-item" href="{% url 'pagamentos' %}">Finalizar Pedido</a></li></button>
+            <button type="submit" class="btn btn-primary mt-3 mb-3"li><a style="color: white; text-decoration: none;" class,="dropdown-item" href="{% url 'pagamentos' %}">Finalizar Pedido</a></li></button>
 
         </div>
 

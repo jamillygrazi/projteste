@@ -1,3 +1,11 @@
+html{
+font-family: "Arial Black";
+}
+
+.font{
+font-family: "Arial Black";
+}
+
 h1{
     background-color: primary;
     width: 800px;
@@ -20,5 +28,5 @@ h1{
 .footer{
     height: 200px;
     background-image:
-            url("/static/image/image.jpeg");
+            url("/static/image/logo.jpg");
 }
