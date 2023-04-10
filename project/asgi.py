@@ -13,5 +13,6 @@ from dj_static import MediaCling, Cling
 from django.core.asgi import get_asgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project.settings')
+application = get_asgi_application()
 
 application = Cling(MediaCling(get_asgi_application()))

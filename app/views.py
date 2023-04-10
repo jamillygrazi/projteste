@@ -1,6 +1,6 @@
 from django.shortcuts import render
 #from django.http import HttpResponse
-from forms
+from .forms import PersonForm
 from .models import Person
 
 # Create your views here.
@@ -27,15 +27,39 @@ def menu(request):
 def pagamentos(request):
     return render(request, 'pagamentos.html')
 
-def person_creat(request):
-    person_form = PersonForm(request.Post or None, request.FILES or None )
+def person_create(request):
+    person_form = PersonForm(request.POST or
+                             None,
+                             request.FILES or
+                             None)
+    if person_form.is_valid():
+        person = person_form.save(commit=False)
+        person.save()
+    return render(request, 'person_create.html',
+                  {'person_form':person_form})
 
- if person_form.is_valid():
-     person = person_form.save(commit=False)
-     person.save()
-     return render(request, 'person_creat.html', {'person_form':person_form})
+def person_read(request):
+    persons = Person.objects.all()
+    return render(request, 'person_read.html',
+                  {'persons':persons})
 
- def person_read(request):
-     persons = Person.objects.all()
-     return render(request, 'person_read.html', {'persons':persons})
+def person_update(request, id):
+    person = get_object_or_404(Person, pk=id)
+    person_form = PersonForm(request.POST or
+                             None,
+                             request.FILES or
+                             None,
+                             instance=person)
+    if person_form.is_valid():
+        person = person_form.save(commit=False)
+        person.save()
+
+    return render(request,
+                  'person_create.html',
+                  {"person_form":person_form})
+
+def person_delete(request, id):
+    person = get_object_or_404(Person, pk=id)
+    person.delete()
+    return redirect("read_person")
 

@@ -26,7 +26,17 @@
           <ul class="dropdown-menu">
              <li><a class="dropdown-item" href="{% url 'read_doc'%}">Cadastro</a></li>
             <li><a class="dropdown-item" href="{% url 'read_doc'%}">Procurar</a></li>
+          </ul>
+        </li>
 
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Person
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{% url 'read_person' %}">Listar</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{% url 'create_person' %}">Cadastrar</a></li>
           </ul>
         </li>
 
@@ -34,7 +44,6 @@
           <a class="nav-link  font" href="{% url 'login'%}" role="button"  aria-expanded="false">
             Login
           </a>
-
         </li>
 
         <li class="nav-item">
