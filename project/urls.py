@@ -20,7 +20,7 @@ from app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('project/', include('app.urls')),
+    path('project/', include('app.urls')),
     path("", views.principal, name='principal'),
     path("login", views.login, name='login'),
     path("create_doc", views.create_doc, name='create_doc'),

@@ -1,5 +1,5 @@
-from django.shortcuts import render
-#from django.http import HttpResponse
+from django.shortcuts import render, redirect, get_object_or_404
+from django.http import HttpResponse
 from .forms import PersonForm
 from .models import Person
 
@@ -13,7 +13,6 @@ def principal(request):
 def login(request):
     return render(request, 'login.html')
 
-
 def create_doc(request):
     return render(request, 'create_doc.html')
 
@@ -26,7 +25,6 @@ def menu(request):
     return render(request, 'menu.html')
 def pagamentos(request):
     return render(request, 'pagamentos.html')
-
 def person_create(request):
     person_form = PersonForm(request.POST or
                              None,
@@ -62,4 +60,3 @@ def person_delete(request, id):
     person = get_object_or_404(Person, pk=id)
     person.delete()
     return redirect("read_person")
-
