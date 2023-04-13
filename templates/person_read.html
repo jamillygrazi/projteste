@@ -28,7 +28,7 @@
 
   <div class="row">
     <div class="col">
-      <h5>{{ person.name }}</h5>
+      <h5>{{ person.nome }}</h5>
     </div>
     <div class="col">
       <h5>{{ person.cpf }}</h5>
@@ -41,7 +41,7 @@
     </div>
     <div class="col">
       <img onclick="confirmDelete(
-              '{{person.name}}','{{person.id}}')"
+              '{{person.nome}}','{{person.id}}')"
            src="{% static 'image/del.png' %}"
              height="20px">
     </div>

@@ -1,45 +1,38 @@
-var  nome  =  "João" ;
-deixe  idade  =  89 ;
-deixe  soma  =  idade  +  10 ;
-deixe  multi  =  idade  *  2 ;
-let  sub  = multi - idade ;
+var name = "João";
+let age = 89;
+let soma = age + 10;
+let multi = age * 2;
+let sub =multi-age;
 
-if ( idade  >  60 ) {
-    console . log ( "Idoso" ) ;
-    alerta ( "Idoso" ) ;
-} senão {
-    alerta ( "Futuro Idoso" ) ;
-}
-
-for ( deixe  i = 0 ;  i < idade ;  i ++ ) {
-    documento . getElementById ( 'saída' ) . innerText  +=  " "  +  i  ;
+if(age > 60){
+    console.log("Idoso");
+    alert("Idoso");
+}else{
+    alert("Futuro Idoso");
 }
 
-while ( idade > 0 ) {
-    console . log ( 'Menos um ponto' ) ;
-    idade -- ;
+for(let i=0; i<age; i++){
+    document.getElementById('output').innerText += " " + i ;
 }
 
-função  sobre ( ) {
-    var  aaa  =  documento . getElementById ( 'rodapé' ) . estilo . backgroundImage = "url('/static/image/urso.jpeg')" ;
-    console . registro ( aaa ) ;
+while(age>0){
+    console.log('Menos um ponto');
+    age--;
 }
-função  fora ( ) {
-    documento . getElementById ( 'rodapé' ) . estilo . backgroundImage = "url('/static/image/image.jpeg')" ;
-}
-function  salvarIdade ( ) {
-    var  idadeVar  =  documento . getElementById ( 'idadeVar' ) . valor ;
-    idade  =  idadeVar ;
-    if ( idade  >  60 ) {
-        console . log ( "Idoso" ) ;
-        alerta ( "Idoso" ) ;
-    } senão {
-        alerta ( "Futuro Idoso" ) ;
+
+function saveAge(){
+    var ageVar = document.getElementById('ageVar').value;
+    age = ageVar;
+    if(age > 60){
+        console.log("Idoso");
+        alert("Idoso");
+    }else{
+        alert("Futuro Idoso");
     }
 }
 
-função  confirmDelete ( nome ,  id ) {
-    if ( confirm ( "Você tem certeza que quer deletar " + nome + "?" ) == true ) {
-        janela . open ( "delete_person/" + id , 'self' )
+function confirmDelete(nome, id){
+    if(confirm("Você tem certeza que quer deletar "+nome+"?")==true){
+        window.open("delete_person/"+id,'self')
     }
 }
