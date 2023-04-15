@@ -7,32 +7,14 @@
 {% block body %}
 <div class="container position-absolute top-50 start-50 translate-middle">
     <h2>Cadastro de Empresa</h2>
-    <form class="row g-3">
-        <div class="col-md-10">
-            <label for="name" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="name">
-        </div>
-        <div class="col-md-3">
-            <label for="CNPJ" class="form-label">CNPJ</label>
-            <input type="int" class="form-control" id="CNPJ">
-        </div>
-        <div class="col-md-6">
-            <label for="email" class="form-label">E-mail</label>
-            <input type="email" class="form-control" id="email">
-        </div>
-        <div class="col-md-2">
-            <label for="password" class="form-label">Senha</label>
-            <input type="password" class="form-control" id="password">
-        </div>
-        <div class="col-12">
-            <label for="address" class="form-label">Endereço</label>
-            <input type="text" class="form-control" id="address" placeholder="">
-        </div>
 
-        <div class="col-4">
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
-        </div>
-    </form>
+
+    <form id="form" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {{ doc_form }}
+    <button type="submit" >cadastrar</button>
+</form>
 </div>
 
 {% endblock %}

@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
-from .forms import PersonForm
-from .models import Person
+from .forms import PersonForm, docForm
+from .models import Person, Doc
 
 # Create your views here.
 def home(request):
@@ -14,10 +14,22 @@ def login(request):
     return render(request, 'login.html')
 
 def create_doc(request):
-    return render(request, 'create_doc.html')
+    docs = Doc.objects.all()
+    return render(request, 'create_doc.html',
+                  {'docs': docs})
+
 
 def read_doc(request):
-    return render(request, 'read_doc.html')
+    doc_form = docForm(request.POST or
+                             None,
+                             request.FILES or
+                             None)
+    if doc_form.is_valid():
+        person = doc_form.save(commit=False)
+        person.save()
+    return render(request, 'read_doc.html',
+                  {'doc_form':doc_form})
+
 
 def pedidos(request):
     return render(request, 'pedidos.html')
@@ -60,3 +72,23 @@ def person_delete(request, id):
     person = get_object_or_404(Person, pk=id)
     person.delete()
     return redirect("read_person")
+
+def doc_delete(request, id):
+    doc = get_object_or_404(Doc, pk=id)
+    doc.delete()
+    return redirect("create_doc")
+
+def doc_update(request, id):
+    doc = get_object_or_404(Doc, pk=id)
+    doc_form = docForm(request.POST or
+                             None,
+                             request.FILES or
+                             None,
+                             instance=doc)
+    if doc_form.is_valid():
+        doc = doc_form.save(commit=False)
+        doc.save()
+
+    return render(request,
+                  'doc_create.html',
+                  {"doc_form":doc_form})

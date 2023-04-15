@@ -13,9 +13,8 @@ class Person(models.Model):
         return self.cpf + ' - ' + self.nome
 
 
-class doc(models.Model):
+class Doc(models.Model):
     nome = models.CharField(max_length=30)
-    idade = models.IntegerField()
     senha = models.CharField(max_length=20)
     email = models.CharField(max_length=30)
     endereço = models.TextField()

@@ -1,7 +1,7 @@
 from django.forms import ModelForm
 from django import forms
 from .models import Person
-from .models import doc
+from .models import Doc
 class PersonForm(ModelForm):
 
     class Meta:
@@ -14,7 +14,7 @@ class PersonForm(ModelForm):
 class docForm(ModelForm):
 
     class Meta:
-        model = doc
+        model = Doc
         fields = ['nome',
                   'senha', 'email',
                   'endereço', 'cnpj']

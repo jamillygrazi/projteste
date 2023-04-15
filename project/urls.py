@@ -32,4 +32,6 @@ urlpatterns = [
     path("read_person", views.person_read, name='read_person'),
     path("update_person/<int:id>", views.person_update, name='update_person'),
     path("delete_person/<int:id>", views.person_delete, name='delete_person'),
+    path("update_doc/<int:id>", views.doc_update, name='update_doc'),
+    path("delete_doc/<int:id>", views.doc_delete, name='delete_doc'),
 ]
