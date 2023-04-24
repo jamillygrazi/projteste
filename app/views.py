@@ -90,5 +90,5 @@ def doc_update(request, id):
         doc.save()
 
     return render(request,
-                  'doc_create.html',
+                  'read_doc.html',
                   {"doc_form":doc_form})
