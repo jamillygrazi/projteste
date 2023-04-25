@@ -16,6 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from app import views
+from rest_framework import routers
+from app.viewsets import PersonViewSet
+
+router = routers.DefaultRouter()
+router.register(r'person', PersonViewSet, basename="Person")
 
 
 urlpatterns = [
@@ -34,4 +39,5 @@ urlpatterns = [
     path("delete_person/<int:id>", views.person_delete, name='delete_person'),
     path("update_doc/<int:id>", views.doc_update, name='update_doc'),
     path("delete_doc/<int:id>", views.doc_delete, name='delete_doc'),
+    path('api/', include(router.urls)),
 ]
